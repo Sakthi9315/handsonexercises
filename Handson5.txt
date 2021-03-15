@@ -1,0 +1,641 @@
+
+Handson5
+
+package com.handson5;
+
+import java.text.SimpleDateFormat;
+
+import java.util.Date;
+
+import java.util.Scanner;
+
+import java.text.ParseException;
+
+ 
+
+class validateDate {
+
+   String a1,a2,a3,a4;
+
+   validateDate(String a,String b,String c,String d) {
+
+      a1=a;
+
+      a2=b;
+
+      a3=c;
+
+     a4=d;
+
+       }
+
+}
+
+public class UserMainCode {
+
+   public static boolean Date(String strDate){
+
+       {
+
+     if (strDate.trim().equals("-"))
+
+     {
+
+     return true;
+
+         }
+
+          else
+
+      {
+
+  SimpleDateFormat sdfrmt = new SimpleDateFormat("dd-mm-yyyy");
+
+    sdfrmt.setLenient(false);
+
+        try
+
+        {
+
+      Date Date = sdfrmt.parse(strDate);
+
+    System.out.println(strDate+ " Valid ");
+
+       }
+
+     catch (ParseException e)
+
+        {
+
+   System.out.println(strDate+" Invalid ");
+
+     return true;
+
+       }
+
+     return false;
+
+       }
+
+ public static void main(String args[]){
+  String str1,str2,str3,str4;
+
+    Scanner s=new Scanner(System.in);
+
+ System.out.println("Sample Input 1: ");
+
+ str1= s.nextLine();
+
+ System.out.println("Sample Output1:");
+
+ System.out.println("Valid");
+
+     str2 = s.nextLine();
+
+    System.out.println("Sample Input 2: ");
+
+    str3= s.nextLine();
+
+  System.out.println("Sample Output2:");
+
+    System.out.println("Invalid");
+
+    str4 = s.nextLine();
+
+      validateDate v=new validateDate(str1,str2,str3,str4);
+
+      System.out.println(" "+v.a1); 
+
+       System.out.println(" "+v.a3);
+
+                                                   
+}    }
+
+
+
+
+   Sample Input 1:
+
+01-05-2008
+
+Sample Output1:
+
+Valid
+
+ 
+
+Sample Input 2:
+
+24/06/2009
+
+Sample Output2:
+
+Invalid
+
+
+2.package com.handson5;
+import java.util.Scanner;
+class UserMaincode2{
+static boolean validCity(String city) {
+	int n=city.length();
+	int f=0;
+	boolean a=Character.isLetter(city.charAt(0));
+	boolean b=Character.isLetter(city.charAt(1));
+	boolean c=Character.isLetter(city.charAt(2));
+	boolean d=Character.isLetter(city.charAt(3));
+	for(int j=2;j<n-2;j++)
+		if(city.charAt(j)!='*') {
+			f=f+1;
+		}
+}
+if(a==true && b==true && f==0 && c==true && d==true)
+{
+	return true;
+}
+else {
+	
+	return false;
+}
+}
+}
+public class UserMaincode2 {
+public static void main(String[] args) {
+Scanner s=new Scanner(System.in);
+String city=s.next();
+boolean b=UserMaincode2.validCity(city);
+if(b==true)
+System.out.println("valid");
+	}
+}
+
+
+Ch***ai 
+Valid 
+ 
+ 
+Mum**i  
+Invalid
+ 
+
+
+
+
+3.package com.handson5;
+import java.util.Scanner;
+
+class UserMaincode3{
+	public static String validPlayer(String name) {
+		String o=null;
+		int 1=name.length();
+		if(name.contains("a")) {
+			for(int i=0;i<1;i++) {
+				if(name.charAt(i)=='a'){
+					if(((i+1)%2)==0) {
+						o="invalid";
+						break;
+					}
+					else {
+						o="valid";}
+					
+					}
+				else {
+					continue;
+				}}}
+	else {
+		o="valid";}
+	return o;
+				}
+		}
+	
+public class Main3 {
+
+	public static void main(String[] args) {
+		Scanner input=new Scanner(System.in);
+		String s=input.nextLine();
+		UserMaincode3 u=new UserMainCode3();
+		System.out.println(u.validPlayer(s));
+	}
+}
+		
+
+Albie Morkel
+Valid
+
+Suresh Raina
+Invalid
+
+4.package com.handson5;
+
+import java.util.Scanner;
+
+class Shape{
+
+ 
+
+                protected String shapeName;
+
+                public Shape(String shapeName) {
+
+                super();
+
+                this.shapeName=shapeName;
+
+                }
+
+    double area() {
+
+                return 0;
+
+    }
+
+    public String getShapeName() {
+
+                return shapeName;
+
+    }
+
+    public void setShape(String shapeName) {
+
+                this.shapeName=shapeName;
+
+                }
+
+}
+
+class Square extends Shape{
+
+    private int side;
+
+    public Square(String shapeName,int side) {
+
+                super(shapeName);
+
+                this.side=side;
+
+    }
+
+    double area() {
+
+                return side;
+
+    }
+
+    public void setSide(int side) {
+
+                this.side=side;
+
+    }
+
+}
+
+class Rectangle extends Shape{
+
+                private int length,breath;
+
+                public Rectangle(String shapeName,int length,int breath) {
+
+                                super(shapeName);
+
+                                this.length=length;
+
+                                this.breath=breath;
+
+                                }
+
+    double area() {
+
+                return length*breath;
+
+    }
+
+    public int getLength() {
+
+                return length;
+
+    }
+
+                public void setLength(int length) {
+
+                                this.length=length;
+
+                }
+
+                public int getBreath() {
+
+                                this.breath=breath;
+
+                }
+
+}
+
+class Circle extends Shape{
+
+                private int radius;
+
+                public Circle(String shapeName,int radius) {
+
+                                super(shapeName);
+
+                                this.radius=radius;
+
+                }
+
+                double area() {
+
+                                return 3.14*radius*radius;
+
+                }
+
+                public int getRadius() {
+
+                                this.radius=radius;
+
+                }
+
+}
+
+public class Main {
+
+ 
+
+                public static void main(String[] args) {
+
+                                Shape o;
+
+                                Scanner s=new Scanner(System.in);
+
+                                System.out.println("1.Rectangle "+" \n2.Square "+"\n3.Circle");
+
+                                System.out.println("Area Calculator-----Choose your Shape");
+
+                                int c=s.nextInt();
+
+                                switch(c) {
+
+                                case 1:{
+
+                                                System.out.println("Enter length and breath");
+
+                                                int l=s.nextInt();
+
+                                                int b=s.nextInt();
+
+                                                o=new Rectangle("Rectangle",l,b);
+
+                                                double area=o.area();
+
+                                                System.out.println("Area of Rectangle is:"+area);
+
+                                }
+
+                                case 2:{
+
+                                                System.out.println("Enter Side");
+
+                                                int x=s.nextInt();
+
+                                                o=new Square("Square",x);
+
+                                                double area=o.area();
+
+                                                System.out.println("Area of Square is:"+area);
+
+                                }
+
+                                case 3:{
+
+                                                System.out.println("Enter Radius");
+
+                                                int r=s.nextInt();
+
+                                                o=new Circle("Circle",r);
+
+                                                double area=o.area();
+
+                                                System.out.println("Area of Circle is:"+area);
+
+                                }
+
+                                default:
+
+                                                System.out.println("Enter valid num");
+
+                                }
+
+                }
+
+}
+
+ 
+
+ 
+ 
+1. Rectangle
+ 
+2. Square
+ 
+3. Circle
+ 
+Area Calculator --- Choose your shape
+ 
+1
+ 
+Enter length and breadth:
+ 
+100
+ 
+40
+ 
+Area of Rectangle is:4000.00
+ 
+ 
+ 
+ 
+1. Rectangle
+ 
+2. Square
+ 
+3. Circle
+ 
+Area Calculator --- Choose your shape
+ 
+2
+ 
+Enter side:
+ 
+20
+ 
+Area of Square is:400.00
+ 
+ 
+ 
+ 
+1. Rectangle
+ 
+2. Square
+ 
+3. Circle
+ 
+Area Calculator --- Choose your shape
+ 
+3
+ 
+Enter Radius:
+ 
+5
+ 
+Area of Circle is:78.54			
+
+
+
+Exception Handson
+
+1.package com.handson5;
+import java.util.Scanner;
+public class Example2 {
+
+public static void main(String[] args) {
+	Scanner s=new Scanner(System.in);
+	try {
+		System.out.println("enter number of overs");
+		int i=s.nextInt();
+		int sc[]=new int[i];
+		System.out.println("enter runs of each over");
+		for(int j=0;j<i;j++) {
+			sc[j]=s.nextInt();
+		}
+		System.out.println("enter over number");
+int k=s.nextInt();
+System.out.println(sc[k-1]);
+	}
+catch(ArrayIndexOutOfBoundsException  | NegativeArraySizeException e) {
+	System.out.println(e.getClass());
+}
+
+
+Output
+enter number of overs
+3
+enter runs of each over
+8
+15
+12
+enter over number
+2
+15
+
+
+
+
+3.import java.util.Scanner;
+
+class CustomException1 extends Exception{
+
+        private int details;
+
+    public CustomException1(int details) {
+         super();
+
+   this.details=details;
+
+                }
+
+}
+
+ 
+
+public class IplSeason4 {
+ static void compute(int a) throws CustomException1{
+
+      if(a==0) {
+
+  throw new CustomException1(a);
+
+                 }
+
+                }
+
+   public static void main(String[] args) {
+
+   Scanner s=new Scanner(System.in);
+
+       try {
+
+ String[] sc= {"Chennai Super Kings","Mumbai Indians", "Delhi Daredevils" ,"Deccan Chargers","Kolkats Knight Riders","Kings XI Punjab","Rajasthan Royal","Royal Challengers Bangalore"};
+
+          int k=0;
+ System.out.println("Enter the Expected Winner Team of IPL Season4" );
+
+     String win=s.nextLine();
+
+     for(int i=0;i<8;i++) {
+
+     if(sc[i].equals(win)) {
+
+       k=1;
+break;
+
+   }
+
+      else {
+
+     k=0;
+}
+
+                }
+
+ compute(k);
+
+  System.out.println("Enter the runner Team of IPL Season4");
+
+ String loss=s.nextLine();
+
+   for(int i=0;i<8;i++) {
+
+       if(sc[i].equals(loss)) {
+
+     k=1;
+
+ break;
+
+       }
+else
+
+    {
+k=0;
+}
+}
+compute(k);
+System.out.println("Expected IPL Season4 winner:"+win);
+System.out.println("Expected IPL Season4 runner:"+loss);
+
+                }
+catch(CustomException1 e) {
+System.out.println("Enter the Expected Winner Team of IPL Season4" );
+System.out.println("TeamNotFoundException:"+"Entered team is not a part of IPL Season4");
+System.out.println(e);
+}
+}
+
+}
+
+ Output:
+
+Enter the Expected Winner Team of IPL Season4
+
+Chennai Super Kings
+
+Enter the runner Team of IPL Season4
+
+Mumbai Indians
+
+Expected IPL Season4 winner:Chennai Super Kings
+
+Expected IPL Season4 runner:Mumbai Indians
+
+ 
+
+
+
+	
+ 

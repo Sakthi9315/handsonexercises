@@ -1,0 +1,29 @@
+Handson_Day4
+
+1)G. 4 3
+
+2)F. hi hi,followed by an exception
+
+3)C. Compilation fails
+
+4)A. true true
+
+5)D. 343 341 340
+
+6)F. pre r1 r4 b1 b2 r3 r2 hawk
+
+7)C. “X extends Y” is correct if X and Y are either both classes or both interfaces.
+
+8)E. Compilation fails
+
+9)E. Compilation fails
+
+10)A. Programmer debug() { return this; }
+
+11)A. Clidlet
+
+12)d)  abstract class Class2 implements Base { }
+
+   e)  abstract class Class2 implements Base {
+
+   f)  public boolean m1 () { return (true); }  }
