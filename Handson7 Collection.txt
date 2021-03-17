@@ -1,0 +1,237 @@
+1)
+
+package com.Handson7;
+
+import java.util.Scanner;
+
+class Runs{
+
+                void displayRuns(int x){
+
+                                int sum=0,avg=0,k;
+
+                                Scanner sn=new Scanner(System.in);
+
+                               
+
+                                for(int j=0;j<x;j++){
+
+                                                k=sn.nextInt();
+
+                                                sum=sum+k;
+
+                                               
+
+                                }
+
+                                System.out.println(""+sum);
+
+                               
+
+                                avg=sum/x;
+
+                                System.out.println(""+avg);
+
+                               
+
+                }
+
+}
+
+ 
+
+public class Example1 {
+
+ 
+
+                public static void main(String[] args) {
+
+                                int a;
+
+                                Scanner s=new Scanner(System.in);
+
+                                a=s.nextInt();
+
+                                Runs r=new Runs();
+
+                                r.displayRuns(a);
+
+                               
+
+ 
+
+                }
+
+ 
+
+}
+
+Output:
+
+4
+
+231
+
+267
+
+289
+
+251
+
+1038
+
+259
+
+ 
+
+2)package com.Handson7;
+
+ 
+
+import java.util.Scanner;
+
+import java.util.Set;
+
+import java.util.TreeSet;
+
+ 
+
+public class Example2 {
+
+                public static void main(String[] args){
+
+                                int runs;
+
+                                Scanner sn=new Scanner(System.in);
+
+                                runs=sn.nextInt();
+
+                                Set<Integer> i=new TreeSet<>();
+
+                                for(int j=0;j<runs;j++){
+
+                                                int k=sn.nextInt();
+
+                                                i.add(k);
+
+                                }
+
+                                for(int x:i){
+
+                                                System.out.println(x);
+
+                                }
+
+                               
+
+                }
+
+ 
+
+}
+
+Output
+
+6
+
+432
+
+543
+
+654
+
+321
+
+123
+
+213
+
+ 
+
+123
+
+213
+
+321
+
+432
+
+543
+
+654
+
+ 
+
+3)
+
+package com.Handson7;
+
+import java.util.ArrayList;
+
+import java.util.Collections;
+
+import java.util.Scanner;
+
+ 
+
+public class Example3 {
+
+ 
+
+                public static void main(String[] args) {
+
+                                int a;
+
+                                String venue,v;
+
+                                Scanner s=new Scanner(System.in);       
+
+                                Scanner s1=new Scanner(System.in);     
+
+                                ArrayList ls=new ArrayList<>();
+
+                                a=s.nextInt();
+
+                                for(int i=0;i<a;i++){
+
+                                                v=s1.nextLine();
+
+                                                ls.add(v);
+
+                                }
+
+                               
+
+                                venue=s1.nextLine();
+
+                                System.out.println(Collections.frequency(ls,venue));
+
+                }
+
+}
+
+Output
+
+8
+
+Eden Gardens
+
+Eden Gardens
+
+Wakhende Stadium
+
+Wakhende Stadium
+
+Eden Gardens
+
+Eden Gardens
+
+M. A. Chidambaram Stadium
+
+M. Chinnaswamy Stadium
+
+ 
+
+Eden Gardens
+
+4
